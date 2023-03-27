@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import classes from '../styles/ListContainer.module.css';
 import pokedexData from '../data/pokedex.json' 
+import ListComponent from './ListComponent';
 
 
 const ListContainer = (props) => {
@@ -28,11 +29,7 @@ const ListContainer = (props) => {
         <div className={classes.container}>
             <ul className={classes.list}>
                 {filteredData.map((data) => (
-                    <li key={data.id} className={classes.list_child} onClick={() => selectPokemon(data.id)}>
-                        <img src={`./assets/thumbnails/${props.getFileName(data.id)}.png`} alt={data.name.english} />
-                        <div>{`No.${props.getFileName(data.id)}`}</div>
-                        <div>{data.name.english}</div>
-                    </li>
+                    <ListComponent data={data} selectPokemon={selectPokemon} getFileName={props.getFileName} />
                 ))}
             </ul>
         </div>

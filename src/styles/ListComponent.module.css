@@ -1,0 +1,23 @@
+.list_child {
+    padding-left:10%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.list_child:hover{
+    cursor:pointer;
+}
+.list_child img {
+    width: 50px;
+}
+.list_child {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    line-height: 50px;
+    padding: 7px 20px;
+}
+.list_child:hover {
+    background-color: black;
+    color: white;
+    border-radius: 100px;
+}
