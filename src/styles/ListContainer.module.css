@@ -1,3 +1,47 @@
 .container {
-    border: 1px solid black;
+    max-height: 87vh;
+    overflow:auto;
+}
+.container::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+.container::-webkit-scrollbar-track {
+    background: #9C1306; 
+}
+
+/* Handle */
+.container::-webkit-scrollbar-thumb {
+    background: #FF7B49; 
+}
+
+/* Handle on hover */
+.container::-webkit-scrollbar-thumb:hover {
+    background: #FF7B49; 
+}
+
+
+.list {
+    padding-left:10%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.list:hover{
+    cursor:pointer;
+}
+.list img {
+    width: 50px;
+}
+.list_child {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    line-height: 50px;
+    padding: 7px 20px;
+}
+.list_child:hover {
+    background-color: black;
+    color: white;
+    border-radius: 100px;
 }

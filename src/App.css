@@ -1,3 +1,20 @@
 .App {
   padding:5%;
+  padding-right:1%;
+  padding-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.App::before {
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to right, white 30%, #FF7D45 30%);
+  transform: skew(-20deg);
 }

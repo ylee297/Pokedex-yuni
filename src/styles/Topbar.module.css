@@ -1,3 +1,55 @@
 .container {
-    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    position: relative;
+    padding: 15px 20px;
+}
+@media only screen and (max-width: 900px) {
+    .container {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+        position: relative;
+        padding: 15px 20px;
+    }
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 150%;
+    height: 100%;
+    z-index: -1;
+    background: #DED4D7;
+    transform: skew(-20deg);
+}
+
+.title {
+    font-weight: bold;
+    font-size: 30px;
+}
+.nameInput {
+    display:flex;
+}
+.nameInput input {
+    display: block;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.nameInput img {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.selectWrapper {
+    height: 30px;
+    text-align: center;
+}
+
+.select {
+    height: 30px;
 }
